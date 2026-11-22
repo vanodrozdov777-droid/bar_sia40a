@@ -1,0 +1,8 @@
+{
+  "name": "BAR DESK",
+  "short_name": "BAR DESK",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#14201f",
+  "theme_color": "#8a5d10"
+}
