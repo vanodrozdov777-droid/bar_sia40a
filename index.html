@@ -2,14 +2,14 @@
 <html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="manifest" href="./manifest.webmanifest">
-<meta name="theme-color" content="#8a5d10">
+<meta name="theme-color" content="#eec5ea">
 <title>Bar Desk — рабочая карта бара</title>
 <style>
-:root{--bg:#eef0ee;--sf:#fff;--sf2:#e3e8e5;--tx:#1b2a2f;--mu:#5d6d72;--ac:#8a5d10;--acx:#fff;--ln:#cfd6d3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#14201f;--sf:#1e2d2c;--sf2:#2a3b3a;--tx:#ece7da;--mu:#98a8a4;--ac:#d9a441;--acx:#1a1408;--ln:#33474a}}
-:root[data-theme="dark"]{color-scheme:dark;--bg:#14201f;--sf:#1e2d2c;--sf2:#2a3b3a;--tx:#ece7da;--mu:#98a8a4;--ac:#d9a441;--acx:#1a1408;--ln:#33474a}
+:root{--bg:#eec5ea;--sf:#fbf4dc;--sf2:#f3e3c8;--tx:#1f4a38;--mu:#6b7d63;--ac:#1f4a38;--acx:#fbf4dc;--ln:#d9b3d4;--hl:#b7e88f;--hlx:#1f4a38;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#14281f;--sf:#1c3329;--sf2:#26443a;--tx:#fbf4dc;--mu:#a9bfa8;--ac:#b7e88f;--acx:#14281f;--ln:#2f5043;--hl:#b7e88f;--hlx:#14281f}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#14281f;--sf:#1c3329;--sf2:#26443a;--tx:#fbf4dc;--mu:#a9bfa8;--ac:#b7e88f;--acx:#14281f;--ln:#2f5043;--hl:#b7e88f;--hlx:#14281f}
 *{box-sizing:border-box}
-html,body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.45 "Trebuchet MS",system-ui,sans-serif}
+html,body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.45 "Nunito","Segoe UI",Roboto,system-ui,sans-serif}
 button,input{font:inherit;color:inherit}button{cursor:pointer}
 :focus-visible{outline:3px solid var(--ac);outline-offset:2px}
 header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5;padding:10px 12px 6px;border-bottom:1px solid var(--ln)}
@@ -26,8 +26,9 @@ summary{padding:13px 14px;font-weight:700;cursor:pointer;min-height:48px}
 table{width:100%;border-collapse:collapse;margin:6px 0 10px}td{padding:7px 0;border-top:1px solid var(--ln);vertical-align:top}td:last-child{text-align:right;white-space:nowrap;padding-left:12px;font-variant-numeric:tabular-nums}
 .lk{background:none;border:0;padding:0;text-align:left;color:var(--ac);text-decoration:underline;min-height:0}
 ol{padding-left:20px;margin:6px 0}li{margin-bottom:5px}
-.req label{display:flex;gap:12px;align-items:center;padding:12px 4px;border-top:1px solid var(--ln);min-height:48px}
-.req input{width:22px;height:22px;accent-color:var(--ac)}.req .d{opacity:.45;text-decoration:line-through}
+.req .row{display:flex;gap:10px;align-items:center;padding:4px;border-top:1px solid var(--ln);min-height:52px}.req .row label{display:flex;gap:10px;align-items:center;flex:1;min-width:0;min-height:44px}
+.req input[type=checkbox]{width:22px;height:22px;flex:none;accent-color:var(--ac)}.req .d label{opacity:.45;text-decoration:line-through}
+.num{width:76px;text-align:right;background:var(--sf);border:1px solid var(--ln);border-radius:8px;padding:9px 8px;min-height:44px;font-variant-numeric:tabular-nums}.st{min-width:44px;padding:9px 0;text-align:center;font-weight:700}.amt{display:flex;align-items:center;gap:6px;white-space:nowrap;flex:none}.u{min-width:42px;color:var(--mu);font-size:.92rem}
 .tag{font-size:.82rem;color:var(--mu);font-weight:400;margin-left:6px}
 
 .brand{display:flex;align-items:center;gap:10px;margin:0 auto 10px;max-width:760px}
@@ -51,9 +52,53 @@ table tr td:first-child{width:72%}
 footer{max-width:760px;margin:0 auto;padding:0 14px 28px;color:var(--mu);font-size:12px;text-align:center}
 @media(min-width:700px){main{padding-top:20px}header{padding-left:20px;padding-right:20px}}
 
+
+/* ===== siarest.ru style ===== */
+html,body{background:var(--bg)}
+header{background:transparent;border:0;box-shadow:none;padding:10px 12px 6px}
+.brand{background:var(--sf);border-radius:999px;padding:10px 12px 10px 14px;max-width:760px;margin:0 auto 10px;gap:12px;box-shadow:0 6px 20px #1f4a3818}
+.brand-mark{width:46px;height:46px;border-radius:50%;background:transparent;color:var(--tx);display:grid;place-items:center}
+.brand strong{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--tx);font-weight:800}
+.brand small{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mu)}
+.theme-btn{width:44px;height:44px;border-radius:50%;background:var(--tx);color:var(--sf);border:0;font-size:18px}
+input[type=search]{border-radius:999px;background:var(--sf);border:2px solid transparent;padding:12px 20px;color:var(--tx);box-shadow:0 4px 14px #1f4a3814}
+input[type=search]::placeholder{color:var(--mu)}
+input[type=search]:focus{border-color:var(--tx);outline:0}
+.tabs{gap:8px;padding:2px 0 8px}
+.chip{border-radius:999px;border:0;background:var(--sf);color:var(--tx);text-transform:uppercase;letter-spacing:.06em;font-size:.84rem;font-weight:700;padding:9px 18px}
+.chip.on{background:var(--tx);color:var(--sf);font-weight:800}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .chip.on{background:var(--hl);color:var(--hlx)}}
+main{padding-top:6px}
+details{border:0;border-radius:26px;background-color:var(--sf);box-shadow:0 6px 18px #1f4a3814;
+}
+summary{text-transform:uppercase;letter-spacing:.05em;font-weight:800;color:var(--tx);padding:15px 20px}
+summary:after{content:"+";display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--hl);color:var(--hlx);font-weight:800;font-size:20px;line-height:1;flex:none}
+details[open]>summary:after{content:"−"}
+.in{padding:0 20px 18px}
+.pill{background:var(--hl);color:var(--hlx);border-radius:999px;padding:3px 12px;font-weight:700;font-size:.8rem}
+td{border-top:1px dashed var(--ln)}
+td:last-child{font-weight:800}
+.lk{color:var(--tx);text-decoration:none;font-weight:700;border-bottom:2px solid var(--hl);padding-bottom:1px}
+.num{border-radius:999px;background:var(--bg);border:0;color:var(--tx)}
+.req .row{border-top:1px dashed var(--ln)}
+.st{border-radius:999px}
+button.st,.req button{border-radius:999px;border:0;background:var(--hl);color:var(--hlx);font-weight:800}
+.req input[type=checkbox]{accent-color:var(--tx)}
+:focus-visible{outline-color:var(--tx)}
+footer{color:var(--tx);opacity:.7;text-transform:uppercase;letter-spacing:.08em;font-size:11px}
+::selection{background:var(--hl);color:var(--hlx)}
+
+.chip{color:var(--tx)!important}.chip.on{color:var(--acx)!important}
+.theme-btn{display:grid;place-items:center;padding:0}
+details{background-image:repeating-conic-gradient(from 0deg at 100% 0,#eec5ea40 0 4deg,transparent 4deg 10deg);background-size:100% 100%}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) details{background-image:none}}
+:root[data-theme="dark"] details{background-image:none}
+.pill{white-space:normal}
+.st,.req button,.bar button,.bar .chip{background:var(--hl)!important;color:var(--hlx)!important;border:0!important;border-radius:999px}
+/* ===== /siarest.ru style ===== */
 </style></head><body>
 <header>
-  <div class="brand"><div class="brand-mark">B</div><div><strong>BAR DESK</strong><small>Рабочая карта бара</small></div><button class="theme-btn" id="themeBtn" type="button" aria-label="Сменить тему">◐</button></div>
+  <div class="brand"><div class="brand-mark"><svg viewBox="0 0 64 64" width="34" height="34" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M46 13c-6 4-12 7-13 15-1 7 6 9 3 17-2 5-8 9-16 11" stroke-width="7"/><ellipse cx="49" cy="11" rx="6" ry="4.5" transform="rotate(-30 49 11)" fill="currentColor" stroke="none"/><path d="M38 24l9 3-3 5M36 22l-6-6-5 1M35 43l8 4 1 6M31 46l-9-2-4 4" stroke-width="3.5"/></svg></div><div><strong>BAR DESK</strong><small>Рабочая карта бара</small></div><button class="theme-btn" id="themeBtn" type="button" aria-label="Сменить тему">◐</button></div>
   <input type="search" id="q" placeholder="Поиск по названию или ингредиенту" aria-label="Поиск">
   <div class="tabs" id="tabs"></div>
 </header>
@@ -67,23 +112,23 @@ var D=[
 "lem|Малина / Маракуйя|Посуда=Хайбол~Украшение=Долька апельсина, бошка мяты|Сироп малины п.ф.=30;Пюре маракуйя=25;Сауэр микс п.ф.=15;Газ. вода=100;Мята (укр)=8;Апельсин (укр)=10|@1",
 "lem|Личи / Лемонграсс|Посуда=Хайбол~Украшение=3 слайса огурца|Пюре личи п.ф.=45;Сироп лемонграсс п.ф.=15;Раствор яблочной кислоты п.ф.=10;Газ. вода=100;Огурец (укр)=10|@1",
 "lem|Ананас|Посуда=Хайбол~Украшение=Лист бамбука, чипс ананаса|Кордиал ананас п.ф.=70;Газ. вода=100;Чипс ананас (укр)=4;Лист бамбука (укр)=1 шт|@1",
-"lem|Мохито б/а|Посуда=Хайбол~Украшение=Бошка мяты|Лайм=45;Сахарный сироп п.ф.=25;Мята=7;Газ. вода=70|Лайм помудлить в хайболе, добавить сироп и мяту¶Засыпать фраппе, немного утрамбовать, долить газированную воду, перемешать и украсить",
-"smo|Клубника / Манго / Апельсин|Посуда=Хайбол~Украшение=Опалённый грейпфрут|Клубника с/м=70;Пюре манго=50;Пюре маракуйя=10;Сахарный сироп п.ф.=15;Авокадо (чищ.)=20;Сок Сантал красный апельсин=100;Грейпфрут (укр)=30|@2",
-"smo|Киви / Шпинат / Ананас|Посуда=Хайбол~Украшение=Семена чиа|Киви (с кожурой)=50;Шпинат=15;Огурец=25;Авокадо (чищ.)=30;Сок ананас=100;Сахарный сироп п.ф.=10;Семена чиа (укр)=3|@2",
+"lem|Мохито б/а|Посуда=Банка (ананасик)~Украшение=Бошка мяты|Лайм=45;Сахарный сироп п.ф.=25;Мята=7;Газ. вода=70|Лайм помудлить в хайболе, добавить сироп и мяту¶Засыпать фраппе, немного утрамбовать, долить газированную воду, перемешать и украсить",
+"smo|Клубника / Манго / Апельсин|Посуда=Айриш~Украшение=Опалённый грейпфрут|Клубника с/м=70;Пюре манго=50;Пюре маракуйя=10;Сахарный сироп п.ф.=15;Авокадо (чищ.)=20;Сок Сантал красный апельсин=100;Грейпфрут (укр)=30|@2",
+"smo|Киви / Шпинат / Ананас|Посуда=Айриш~Украшение=Семена чиа|Киви (с кожурой)=50;Шпинат=15;Огурец=25;Авокадо (чищ.)=30;Сок ананас=100;Сахарный сироп п.ф.=10;Семена чиа (укр)=3|@2",
 "smo|Пина колада б/а|Посуда=Хайбол~Украшение=Лист бамбука, сливки, стружка|Кокосовые сливки=50;Кокосовое молоко=50;Ананас (чищ.)=100;Сироп ванили п.ф.=30;Авокадо (чищ.)=20;Сок ананас=50;Бамбуковый лист (укр)=1 шт;Взбитые сливки п.ф. (укр)=25;Кокосовая стружка (укр)=3|@2",
-"mil|Арахис / Банан / Карамель|Украшение=Взбитые сливки, арахис, топинг|Сливки 10%=50;Молоко 3,2%=100;Мороженое=120;Арахисовая паста=20;Банан (чищ.)=70;Карамельный топинг=10;Взбитые сливки п.ф. (укр)=25;Топинг карамель (укр)=5;Арахис солёный (укр)=5|@3¶Сверху на взбитые сливки — топинг, посыпать арахисом",
-"mil|Авокадо / Фундук / Шоколад|Украшение=Взбитые сливки, натёртый горький шоколад|Сливки 10%=50;Молоко фундучное=100;Мороженое=120;Авокадо (чищ.)=50;Шоколадный топинг=10;Взбитые сливки п.ф. (укр)=25;Горький шоколад (укр)=5|@3¶Натереть горький шоколад на сливки",
-"mil|Клубника / Печенье|Украшение=Взбитые сливки, субл. клубника|Кокосовое молоко=50;Молоко 3,2%=100;Мороженое=120;Печенье Юбилейное=20;Клубника с/м=70;Сироп миндаль=10;Взбитые сливки п.ф. (укр)=25;Клубника сублимированная (укр)=2|@3¶Посыпать сублимированной клубникой",
-"mil|Ваниль|Украшение=Взбитые сливки|Сливки 10%=50;Молоко 3,2%=100;Мороженое=120;Сироп ванили п.ф.=15;Взбитые сливки п.ф. (укр)=25|@3",
-"mil|Шоколад|Украшение=Взбитые сливки|Сливки 10%=50;Молоко 3,2%=100;Мороженое=120;Шоколадный топинг=15;Взбитые сливки п.ф. (укр)=25|@3",
-"cof|Латте Крем-брюле / Апельсин|Украшение=Жжёный сахар|Эспрессо=1 пор (15–18 мл);Молоко 3,2%=175;Сироп крем-брюле=10;Цитрусовый сахар п.ф.=5;Цитрусовый сахар п.ф. (укр)=3|Влить все ингредиенты (кроме укр.) в питчер, взбить¶Перелить в бокал, посыпать цитрусовым сахаром, обжечь горелкой",
+"mil|Арахис / Банан / Карамель|Посуда=Хайбол~Украшение=Взбитые сливки, арахис, топинг|Сливки 10%=50;Молоко 3,2%=100;Мороженое=120;Арахисовая паста=20;Банан (чищ.)=70;Карамельный топинг=10;Взбитые сливки п.ф. (укр)=25;Топинг карамель (укр)=5;Арахис солёный (укр)=5|@3¶Сверху на взбитые сливки — топинг, посыпать арахисом",
+"mil|Авокадо / Фундук / Шоколад|Посуда=Хайбол~Украшение=Взбитые сливки, натёртый горький шоколад|Сливки 10%=50;Молоко фундучное=100;Мороженое=120;Авокадо (чищ.)=50;Шоколадный топинг=10;Взбитые сливки п.ф. (укр)=25;Горький шоколад (укр)=5|@3¶Натереть горький шоколад на сливки",
+"mil|Клубника / Печенье|Посуда=Хайбол~Украшение=Взбитые сливки, субл. клубника|Кокосовое молоко=50;Молоко 3,2%=100;Мороженое=120;Печенье Юбилейное=20;Клубника с/м=70;Сироп миндаль=10;Взбитые сливки п.ф. (укр)=25;Клубника сублимированная (укр)=2|@3¶Посыпать сублимированной клубникой",
+"mil|Ваниль|Посуда=Хайбол~Украшение=Взбитые сливки|Сливки 10%=50;Молоко 3,2%=100;Мороженое=120;Сироп ванили п.ф.=15;Взбитые сливки п.ф. (укр)=25|@3",
+"mil|Шоколад|Посуда=Хайбол~Украшение=Взбитые сливки|Сливки 10%=50;Молоко 3,2%=100;Мороженое=120;Шоколадный топинг=15;Взбитые сливки п.ф. (укр)=25|@3",
+"cof|Латте Крем-брюле / Апельсин|Посуда=Айриш~Украшение=Жжёный сахар|Эспрессо=1 пор (15–18 мл);Молоко 3,2%=175;Сироп крем-брюле=10;Цитрусовый сахар п.ф.=5;Цитрусовый сахар п.ф. (укр)=3|Влить все ингредиенты (кроме укр.) в питчер, взбить¶Перелить в бокал, посыпать цитрусовым сахаром, обжечь горелкой",
 "cof|Бамбл Манго / Ваниль|Украшение=Чипс апельсина|Эспрессо=1 пор (15–18 мл);Сок Сантал красный апельсин=100;Сироп ванили п.ф.=15;Пюре манго=20;Пюре маракуйя=5;Чипс апельсина (укр)=3|Влить все, кроме эспрессо и укр., в бокал, насыпать лёд¶Перемешать, аккуратно влить сверху эспрессо, украсить",
 "cof|Раф Арахис / Пандан|Украшение=Натёртая цедра лайма|Арахисовая паста=10;Сироп пандан=20;Эспрессо=1 пор (15–18 мл);Сливки 10%=150;Цедра лайма (укр)=1|В питчер добавить все ингредиенты, тщательно взбить стимером, чтобы паста смешалась¶Перелить в бокал, сверху натереть цедру лайма",
 "cof|Чай Ананас / Имбирь / Мёд|Посуда=Чайник|Кордиал ананас п.ф.=75;Мёд цветочный=15;Сироп имбирь п.ф.=15;Сухой лемонграсс=3;Вода (кипяток)=350|Влить все ингредиенты в чайник, вспенить стимером¶Чай (сухой лемонграсс) насыпать в сетку",
 "cof|Чай Манго / Малина|Посуда=Чайник|Пюре манго=40;Сироп малины п.ф.=75;Эрл Грей=3;Апельсин=50;Вода (кипяток)=350|Апельсин нарезать дольками, переложить в чайник, слегка помудлить¶Влить все, кроме чая, взбить стимером, чай насыпать в сетку",
-"tap|Тапиока Тайский чай / Фисташка / Малина|Украшение=Взбитые сливки|Тапиока п.ф.=50;Фисташковое молоко=200;Тайский чай=2;Пюре личи п.ф.=15;Сироп малины п.ф.=15;Взбитые сливки п.ф.=25|В питчер насыпать чай, залить молоком, разогреть стимером¶В бокал пересыпать тапиоку, на дно налить личи и малину, слегка перемешать¶Через сито перелить чай с молоком в бокал, сверху взбитые сливки",
-"tap|Тапиока Тирамису / Пломбир|Украшение=Сырная пена, какао|Тапиока п.ф.=50;Эспрессо=1 пор (15–18 мл);Сироп тирамису=10;Молоко пломбирное=200;Молоко 3,2% (укр)=25;Маскарпоне (укр)=10;Сироп ванили п.ф. (укр)=5;Какао-порошок=1|Сырная пена: молоко 3,2% слегка разогреть в питчере, добавить сыр и сироп, взбить ручным капучинатором¶В бокал пересыпать тапиоку, налить сироп, сверху разогретое пломбирное молоко и эспрессо¶Выложить сырную пену, посыпать какао",
-"tap|Джус болл Ананас / Яблоко|Украшение=Кружки огурца|Джус болл яблоко=30;Кордиал ананас п.ф.=35;Пюре каламанси=5;Сироп лемонграсс п.ф.=10;Сахарный сироп п.ф.=5;Газ. вода=200;Огурец (укр)=30|Отвесить в бокал джус боллы, влить остальные ингредиенты¶Добавить немного льда (4 кубика), украсить огурцом",
+"tap|Тапиока Тайский чай / Фисташка / Малина|Посуда=Банка (ананасик)~Украшение=Взбитые сливки|Тапиока п.ф.=50;Фисташковое молоко=200;Тайский чай=2;Пюре личи п.ф.=15;Сироп малины п.ф.=15;Взбитые сливки п.ф.=25|В питчер насыпать чай, залить молоком, разогреть стимером¶В бокал пересыпать тапиоку, на дно налить личи и малину, слегка перемешать¶Через сито перелить чай с молоком в бокал, сверху взбитые сливки",
+"tap|Тапиока Тирамису / Пломбир|Посуда=Банка (ананасик)~Украшение=Сырная пена, какао|Тапиока п.ф.=50;Эспрессо=1 пор (15–18 мл);Сироп тирамису=10;Молоко пломбирное=200;Молоко 3,2% (укр)=25;Маскарпоне (укр)=10;Сироп ванили п.ф. (укр)=5;Какао-порошок=1|Сырная пена: молоко 3,2% слегка разогреть в питчере, добавить сыр и сироп, взбить ручным капучинатором¶В бокал пересыпать тапиоку, налить сироп, сверху разогретое пломбирное молоко и эспрессо¶Выложить сырную пену, посыпать какао",
+"tap|Джус болл Ананас / Яблоко|Посуда=Банка (ананасик)~Украшение=Кружки огурца|Джус болл яблоко=30;Кордиал ананас п.ф.=35;Пюре каламанси=5;Сироп лемонграсс п.ф.=10;Сахарный сироп п.ф.=5;Газ. вода=200;Огурец (укр)=30|Отвесить в бокал джус боллы, влить остальные ингредиенты¶Добавить немного льда (4 кубика), украсить огурцом",
 "aut|Малина — калпис сауэр|Посуда=Шале~Лёд=Нет~Украшение=Настой мыльянки|Джин=40;Сироп малины п.ф.=30;Концентрат Калпис=10;Раствор яблочной кислоты п.ф.=10;Сауэр микс п.ф.=10;Сироп лемонграсс п.ф.=5;Соляной раствор п.ф.=0,0005 (2 капли);Настой корня мыльянки п.ф.=3|Шейк; файн-стрейн; драй-шейк",
 "aut|Ананасовый смэш|Посуда=Рокс~Лёд=Кусковой~Украшение=Сушёный ананас + базилик|Текила=40;Кордиал ананас п.ф.=75;Базилик зелёный=5;Сахарный сироп п.ф.=2,5;Пюре каламанси=5;Настой корня мыльянки п.ф.=3;Чипс ананас (укр)=8|Базилик поместить в малый пин, добавить 25 мл премикса, хорошенько помудлить; долить остальное; шейк; файн-стрейн",
 "aut|Зомби|Посуда=Тики~Лёд=Кусковой~Украшение=Половинка лайма, сахар, абсент, мята|Ром белый=40;Ром тёмный (выдержанный)=20;Пряный сироп п.ф.=20;Сауэр микс п.ф.=15;Ликёр амаретто=2,5;Ликёр черри-бренди=5;Грейпфрутовый сок=50;Сок лайма=7,5;Абсент (укр)=5;Мята (укр)=4;Сахар рафинад (укр)=6|Шейк; файн-стрейн¶На половинку лайма положить кубик сахара, обдать абсентом",
@@ -91,10 +136,10 @@ var D=[
 "aut|Негрони пандан|Посуда=Рокс~Лёд=Глыба~Украшение=Глыба; треугольник из бамбука|Негрони пандан п.ф.=75;Кордиал лайма п.ф.=15;Сироп пандан=5;Соджу виноград=2,5|Стир",
 "aut|Гуава — маракуйя|Посуда=Хайбол~Лёд=Кусковой~Украшение=Опалённый грейпфрут|Ром белый=35;Пюре маракуйя=15;Сироп малины п.ф.=5;Сауэр микс п.ф.=25;Кокосовая вода с гуавой=50;Сироп лемонграсс п.ф.=10;Грейпфрут (укр)=30|Сироп малины на дно стакана; шейк; файн-стрейн",
 "aut|Кокос — клубника|Посуда=Винный бокал~Лёд=Кусковой~Украшение=Йогуртовая пена; субл. клубника|Клубничный соджу=30;Жозеф Картрон какао-уайт=10;Кордиал лайма п.ф.=25;Вода Iki кокос=50;Сироп ванили п.ф.=5;Соляной раствор п.ф.=0,005 (2 капли);Вода газ.=25;Пена йогурт п.ф.=40;Клубника сублимированная=2|Стир",
-"aut|Карри Мэри|Посуда=Большой бокал~Украшение=Лист лайма / обожжённый лайм|Водка=40;Сангрита карри п.ф.=150;Лист лайма (укр)=1;Лайм (укр)=2|Фроул",
+"aut|Карри Мэри|Посуда=Банка (ананасик)~Украшение=Лист лайма / обожжённый лайм|Водка=40;Сангрита карри п.ф.=150;Лист лайма (укр)=1;Лайм (укр)=2|Фроул",
 "cls|Пронстар мартини|Посуда=Шале; игристое — шот~Лёд=Нет~Украшение=Чипс апельсина|Водка (Тундра)=40;Пюре маракуйя=25;Ванильный сироп п.ф.=20;Сауэр микс п.ф.=15;Брют (хаус)=50;Чипс апельсина (укр)=2,5|Шейк / файн-стрейн всё, кроме брюта; брют подать отдельно в шоте¶Готовый напиток перелить в охлаждённое шале, украсить чипсом апельсина",
 "cls|Бейзл смэш|Посуда=Рокс~Лёд=Кусковой~Украшение=Лист базилика|Джин (Biology)=40;Фреш лимона=25;Сахарный сироп п.ф.=20;Базилик=5;Базилик (укр)=2|Помудлить базилик в шейкере, налить все ингредиенты, шейк / файн-стрейн¶Перелить в охлаждённый рокс со льдом, украсить красивым листом базилика",
-"cls|Пина колада|Лёд=Кусковой~Украшение=Сливки / бамбуковый лист / стружка|Ром белый (Консьерж)=40;Кокосовые сливки=50;Кокосовое молоко=50;Ананас (чищ.)=100;Сироп ванили п.ф.=30;Авокадо (чищ.)=20;Сок ананас=50;Бамбуковый лист (укр)=1 шт;Взбитые сливки п.ф. (укр)=25;Кокосовая стружка (укр)=3|Добавить все ингредиенты с 4 кубиками льда и 10–15 мл кипятка в блендер¶Перебить, перелить в бокал, украсить",
+"cls|Пина колада|Посуда=Хайбол~Лёд=Кусковой~Украшение=Сливки / бамбуковый лист / стружка|Ром белый (Консьерж)=40;Кокосовые сливки=50;Кокосовое молоко=50;Ананас (чищ.)=100;Сироп ванили п.ф.=30;Авокадо (чищ.)=20;Сок ананас=50;Бамбуковый лист (укр)=1 шт;Взбитые сливки п.ф. (укр)=25;Кокосовая стружка (укр)=3|Добавить все ингредиенты с 4 кубиками льда и 10–15 мл кипятка в блендер¶Перебить, перелить в бокал, украсить",
 "cls|Мохито|Посуда=Хайбол~Лёд=Фраппе~Украшение=Долька лайма / бошка мяты|Ром белый (Консьерж)=40;Лайм=40;Мята=5;Сахарный сироп п.ф.=20;Газ. вода=50;Лайм (укр)=10;Мята (укр)=2|Помудлить лайм в хайболе, добавить остальное, кроме газ. воды¶Засыпать фраппе, утрамбовать, долить газировку, перемешать, украсить",
 "cls|Дайкири|Посуда=Ник и Нора~Лёд=Нет~Украшение=Нет|Ром белый (Консьерж)=50;Фреш лайма=25;Сахарный сироп п.ф.=15|Шейк / файн-стрейн",
 "cls|Маргарита|Посуда=Ник и Нора~Лёд=Нет~Украшение=Соль на бокале|Текила (Эспесьяль Сильвер)=40;Фреш лайма=25;Куантро / трипл сек=20;Сахарный сироп п.ф.=5;Соль (укр)=2|Пройтись по краю бокала лаймом, посыпать солью, охладить бокал¶Шейк, файн-стрейн",
@@ -106,9 +151,9 @@ var D=[
 "cls|Ром Олд фэшн|Посуда=Рокс~Лёд=Куб~Украшение=Долька апельсина|Ром выдержанный (уточнить марку)=50;Сироп ванильный п.ф.=7;Биттер Ангостура=2;Долька апельсина=—|Стир¶Перелить в охлаждённый бокал с кубом льда и печатью",
 "nas|Настойка Малина / Личи|Су-вид=3 ч, 50 °C~Выход=1280 мл|Малина с/м=800;Сахар песок=160;Соль=1;Водка=950;Берёзовый сок=50;Сироп консервированных личи (после су-вида)=200;Ягода личи консерв. (после су-вида)=200 (16 шт);Сауэр микс п.ф. (после су-вида)=100;Сахарный сироп (после су-вида)=50|Загрузить малину, сахар, соль, водку и берёзовый сок, готовить в су-виде 3 ч при 50 °C¶Добавить 200 мл сиропа консервированных личи и 16 шт (200 г) ягоды, перебить в блендере¶Процедить через мелкое сито¶Добавить 100 мл сауэр микса и сахарный сироп",
 "nas|Лимончелло в азиатском стиле|Су-вид=2 ч, 50 °C~Выход=1300 мл|Водка=800;Вода=100;Берёзовый сок=100;Соль=1;Сахар=230;Цедра лимона=80;Цедра лайма=40;Лемонграсс=12;Фреш лимона=100;Фреш лайма=100|Снять цедру с лимона и лайма без альбедо, лемонграсс нарезать¶Загрузить все ингредиенты, готовить в су-виде 2 ч при 50 °C¶После су-вида быстро охладить и процедить",
-"gl|Белый глинтвейн б/а|Су-вид=3 ч, 55 °C~Выход=1050 мл~Порция=200 г готового напитка~Украшение=Яблочный чипс|Корица=6 (1,5 шт);Яблоки красные=250;Бадьян=1,5 (1 шт);Имбирь=10;Кардамон=0,5 (1 шт);Мёд=50;Липа=6;Лимон=50;Сок красное яблоко=750;Сок зелёное яблоко=250|Яблоки, имбирь и лимон нарезать, все специи растолочь в ступке¶Загрузить все ингредиенты, готовить в су-виде 3 ч при 55 °C¶Процедить через мелкое сито",
-"gl|Красный глинтвейн|Су-вид=3 ч, 55 °C~Выход=1150 мл~Порция=200 г готового напитка~Украшение=С/м смородина (5 г), долька грейпфрута (10 г)|Смородина с/м=200;Можжевельник=0,3 (1 шт);Бадьян=1,5 (1 шт);Гвоздика=0,5 (2 шт);Корица=6 (1,5 шт);Апельсин=150;Лимон=50;Яблоко красное=100;Мёд=100;Сахар тростниковый=65;Сок смородины=150;Вино красное=750|Смородину подавить; лимон, апельсин и яблоки нарезать; все специи растолочь в ступке¶Загрузить все ингредиенты, готовить в су-виде 3 ч при 55 °C¶Процедить через мелкое сито",
-"mat|Матча латте банан / Малиновые сливки|Посуда=Бокал~Украшение=Малиновые взбитые сливки|Зелёная матча=3;Вода=30;Молоко банановое=150;Сироп ванили п.ф.=10;Сливки 33%=50;Сироп малины п.ф.=15;Краситель красный=1 капля|В первом питчере развести матчу в воде ручным капучинатором, добавить молоко и сироп ванили, перемешать капучинатором, не поднимая пену¶Во втором питчере смешать сливки, сироп малины и краситель, взбить капучинатором¶Готовую матчу перелить в бокал, сверху выложить малиновые взбитые сливки",
+"gl|Белый глинтвейн б/а|Посуда=Айриш~Су-вид=3 ч, 55 °C~Выход=1050 мл~Порция=200 г готового напитка~Украшение=Яблочный чипс|Корица=6 (1,5 шт);Яблоки красные=250;Бадьян=1,5 (1 шт);Имбирь=10;Кардамон=0,5 (1 шт);Мёд=50;Липа=6;Лимон=50;Сок красное яблоко=750;Сок зелёное яблоко=250|Яблоки, имбирь и лимон нарезать, все специи растолочь в ступке¶Загрузить все ингредиенты, готовить в су-виде 3 ч при 55 °C¶Процедить через мелкое сито",
+"gl|Красный глинтвейн|Посуда=Айриш~Су-вид=3 ч, 55 °C~Выход=1150 мл~Порция=200 г готового напитка~Украшение=С/м смородина (5 г), долька грейпфрута (10 г)|Смородина с/м=200;Можжевельник=0,3 (1 шт);Бадьян=1,5 (1 шт);Гвоздика=0,5 (2 шт);Корица=6 (1,5 шт);Апельсин=150;Лимон=50;Яблоко красное=100;Мёд=100;Сахар тростниковый=65;Сок смородины=150;Вино красное=750|Смородину подавить; лимон, апельсин и яблоки нарезать; все специи растолочь в ступке¶Загрузить все ингредиенты, готовить в су-виде 3 ч при 55 °C¶Процедить через мелкое сито",
+"mat|Матча латте банан / Малиновые сливки|Посуда=Хайбол~Украшение=Малиновые взбитые сливки|Зелёная матча=3;Вода=30;Молоко банановое=150;Сироп ванили п.ф.=10;Сливки 33%=50;Сироп малины п.ф.=15;Краситель красный=1 капля|В первом питчере развести матчу в воде ручным капучинатором, добавить молоко и сироп ванили, перемешать капучинатором, не поднимая пену¶Во втором питчере смешать сливки, сироп малины и краситель, взбить капучинатором¶Готовую матчу перелить в бокал, сверху выложить малиновые взбитые сливки",
 "pf|Раствор яблочной кислоты п.ф.|Выход=1|Яблочная кислота=40;Вода=1|Растворить кислоту в воде",
 "pf|Сахарный сироп п.ф.|Выход=1,6|Сахар песок=1,5;Вода (кипяток)=1|Растворить сахар в кипятке, перемешивая венчиком",
 "pf|Сауэр микс п.ф.|Выход=1,75|Раствор яблочной кислоты п.ф.=1;Сахарный сироп п.ф.=750|Смешать",
@@ -132,31 +177,51 @@ var D=[
 ];
 var TABS=[["req","Заявка"],["lem","Лимонады"],["smo","Смузи"],["mil","Милк шейки"],["cof","Кофе / Чай"],["tap","Тапиока"],["aut","Авторские"],["cls","Классика"],["nas","Настойки"],["gl","Глинтвейны"],["mat","Матча"],["pf","Полуфабрикаты"]];
 var R=D.map(function(l){var p=l.split("|");return{t:p[0],n:p[1],meta:p[2]?p[2].split("~").map(function(x){return x.split("=")}):[],ing:p[3].split(";").map(function(x){var i=x.lastIndexOf("=");return[x.slice(0,i),x.slice(i+1)]}),m:(p[4]==="@1"?M1:p[4]==="@2"?M2:p[4].replace("@3",M3)).split("¶")}});
-var S={tab:"lem",f:1,q:"",chk:{}};
-try{var sv=JSON.parse(localStorage.getItem("bardesk3")||"null");if(sv){S.chk=sv.chk||{};S.tab=sv.tab||S.tab}}catch(e){}
-function save(){try{localStorage.setItem("bardesk3",JSON.stringify({chk:S.chk,tab:S.tab}))}catch(e){}}
+var S={tab:"lem",f:1,m:1,q:"",chk:{},amt:{}};
+try{var sv=JSON.parse(localStorage.getItem("bardesk3")||"null");if(sv){S.chk=sv.chk||{};S.tab=sv.tab||S.tab;S.amt=sv.amt||{};S.m=sv.m>0?sv.m:1}}catch(e){}
+function save(){try{localStorage.setItem("bardesk3",JSON.stringify({chk:S.chk,tab:S.tab,amt:S.amt,m:S.m}))}catch(e){}}
 function $(i){return document.getElementById(i)}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function sc(v){if(S.f===1)return v;return v.replace(/\d+(?:,\d+)?(?:\.\d+)?/g,function(x){var n=parseFloat(x.replace(",","."))*S.f;return String(Math.round(n*10000)/10000).replace(".",",")})}
 function base(n){return n.replace(/\s*\(.*?\)/g,"").replace(/п\.ф\.?/,"").trim()}
 function card(r,open,showTab){
- var h='<details'+(open?' open':'')+'><summary>'+esc(r.n)+(showTab?'<span class="tag">'+TABS.filter(function(t){return t[0]===r.t})[0][1]+'</span>':'')+'</summary><div class="in">'+r.meta.map(function(m){return '<span class="pill">'+esc(m[0])+': '+esc(m[1])+'</span>'}).join("")+'<table>'+r.ing.map(function(g){var pf=g[0].indexOf("п.ф.")>-1?'<button class="lk" data-s="'+esc(base(g[0]))+'">'+esc(g[0])+'</button>':esc(g[0]);return '<tr><td>'+pf+'</td><td>'+esc(sc(g[1]))+'</td></tr>'}).join("")+'</table><b>Технология приготовления</b><ol>'+r.m.map(function(s){return '<li>'+esc(s)+'</li>'}).join("")+'</ol></div></details>'; return h}
+ var h='<details'+(open?' open':'')+'><summary>'+esc(r.n)+(showTab?'<span class="tag">'+TABS.filter(function(t){return t[0]===r.t})[0][1]+'</span>':'')+'</summary><div class="in">'+r.meta.map(function(m){return '<span class="pill">'+esc(m[0])+': '+esc(m[1])+'</span>'}).join("")+'<table>'+r.ing.map(function(g){var pf=g[0].indexOf("п.ф.")>-1?'<button class="lk" data-s="'+esc(base(g[0]))+'">'+esc(g[0])+'</button>':esc(g[0]);return '<tr><td>'+pf+'</td><td class="q" data-b="'+esc(g[1])+'">'+esc(sc(g[1]))+'</td></tr>'}).join("")+'</table><b>Технология приготовления</b><ol>'+r.m.map(function(s){return '<li>'+esc(s)+'</li>'}).join("")+'</ol></div></details>'; return h}
+function fmt(v){return String(Math.round(v*10000)/10000).replace(".",",")}
+function num(s){var v=parseFloat(String(s).replace(",",".").replace(/\s/g,""));return isNaN(v)?null:v}
+function pa(s){var m=/^\s*(\d+(?:[.,]\d+)?)\s*(.*)$/.exec(s);return m?{n:parseFloat(m[1].replace(",",".")),u:m[2]}:{n:null,u:s==="—"?"":s}}
+function stp(k,v){return '<button class="chip st" type="button" data-k="'+k+'" data-d="-1" aria-label="Меньше">−</button><input class="num" type="text" inputmode="decimal" data-n="'+k+'" value="'+fmt(v)+'" aria-label="'+(k==="f"?"Количество порций или партий":"Множитель заявки")+'"><button class="chip st" type="button" data-k="'+k+'" data-d="1" aria-label="Больше">+</button>'}
+function updQty(){var c=document.querySelectorAll("td.q");for(var i=0;i<c.length;i++)c[i].textContent=sc(c[i].dataset.b)}
+function updReq(){var c=document.querySelectorAll("input[data-a]");for(var i=0;i<c.length;i++){var p=pa(c[i].dataset.b);c[i].value=p.n===null?"":fmt(p.n*S.m)}}
 function draw(){
  $("tabs").innerHTML=TABS.map(function(t){return '<button class="chip'+(!S.q&&t[0]===S.tab?' on':'')+'" data-t="'+t[0]+'">'+t[1]+'</button>'}).join("");
  var h="",q=S.q.toLowerCase().trim();
  if(!q&&S.tab==="req"){var req=REQ.split(";"),done=req.filter(function(x){return S.chk[x]}).length;
-  h='<div class="bar"><b>Заявка на закупку</b><span class="mu">Отмечено '+done+' из '+req.length+'</span><span style="flex:1"></span><button class="chip" id="rs">Сбросить</button></div><div class="req">'+req.map(function(x,i){var p=x.split("="),k=x;return '<label class="'+(S.chk[k]?'d':'')+'"><input type="checkbox" data-c="'+esc(k)+'"'+(S.chk[k]?' checked':'')+'><span style="flex:1">'+esc(p[0])+'</span><b>'+esc(p[1])+'</b></label>'}).join("")+'</div>';
+  h='<div class="bar"><b>Заявка на закупку</b><span class="mu">Отмечено '+done+' из '+req.length+'</span><span style="flex:1"></span><button class="chip" id="rs">Сбросить отметки</button></div>'
+   +'<div class="bar"><span class="mu">Множитель заявки:</span>'+stp("m",S.m)+'<button class="chip" id="ra">Сбросить кол-ва</button></div>'
+   +'<div class="req">'+req.map(function(x){var p=x.split("="),a=pa(p[1]),v=S.amt[p[0]]!==undefined?S.amt[p[0]]:(a.n===null?"":fmt(a.n*S.m));
+     return '<div class="row'+(S.chk[x]?' d':'')+'"><label><input type="checkbox" data-c="'+esc(x)+'"'+(S.chk[x]?' checked':'')+'><span>'+esc(p[0])+'</span></label><span class="amt"><input class="num" type="text" inputmode="decimal" data-a="'+esc(p[0])+'" data-b="'+esc(p[1])+'" value="'+esc(v)+'" placeholder="—" aria-label="Количество: '+esc(p[0])+'"><span class="u">'+esc(a.u)+'</span></span></div>'}).join("")+'</div>';
  }else{
   var list=q?R.filter(function(r){return r.n.toLowerCase().indexOf(q)>-1||r.ing.some(function(g){return g[0].toLowerCase().indexOf(q)>-1})}):R.filter(function(r){return r.t===S.tab});
-  h='<div class="bar"><span class="mu">Порций / партий:</span>'+[1,2,5,10].map(function(f){return '<button class="chip'+(S.f===f?' on':'')+'" data-f="'+f+'">×'+f+'</button>'}).join("")+'<span class="mu">'+list.length+' шт.</span></div>';
+  h='<div class="bar"><span class="mu">Порций / партий:</span>'+stp("f",S.f)+'<span class="mu">'+list.length+' шт.</span></div>';
   h+=list.length?list.map(function(r){return card(r,!!q&&list.length<4,!!q)}).join(""):'<p class="mu">Ничего не найдено. Попробуйте другое слово.</p>';
  }
  $("app").innerHTML=h;
 }
 document.addEventListener("click",function(e){var t=e.target.closest("button");if(!t)return;var d=t.dataset;
- if(d.t){S.tab=d.t;S.q="";$("q").value=""}if(d.f)S.f=+d.f;if(d.s){S.q=d.s;$("q").value=d.s}if(t.id==="rs")S.chk={};
- if(d.t||d.f||d.s||t.id==="rs"){save();draw();if(!d.f)window.scrollTo(0,0)}});
-document.addEventListener("change",function(e){var c=e.target.dataset.c;if(c!==undefined){S.chk[c]=e.target.checked;save();draw()}});
+ if(d.k){var v=S[d.k];v=+d.d>0?v+1:Math.max(0.5,v-1);S[d.k]=Math.round(v*10000)/10000;
+  var inp=document.querySelector('input[data-n="'+d.k+'"]');if(inp)inp.value=fmt(S[d.k]);
+  if(d.k==="f")updQty();else{S.amt={};save();updReq()}return}
+ if(d.t){S.tab=d.t;S.q="";$("q").value=""}
+ if(d.s){S.q=d.s;$("q").value=d.s}
+ if(t.id==="rs")S.chk={};
+ if(t.id==="ra"){S.amt={};S.m=1}
+ if(d.t||d.s||t.id==="rs"||t.id==="ra"){save();draw();if(d.t||d.s)window.scrollTo(0,0)}});
+document.addEventListener("input",function(e){var d=e.target.dataset;
+ if(d.n){var v=num(e.target.value);if(v!==null&&v>0){S[d.n]=v;if(d.n==="f")updQty();else{S.amt={};save();updReq()}}}
+ else if(d.a!==undefined){S.amt[d.a]=e.target.value;save()}});
+document.addEventListener("change",function(e){var d=e.target.dataset;
+ if(d.c!==undefined){S.chk[d.c]=e.target.checked;save();draw()}
+ else if(d.n){e.target.value=fmt(S[d.n])}});
 $("q").addEventListener("input",function(e){S.q=e.target.value;draw()});
 draw();
 try{var themeBtn=document.getElementById("themeBtn");
